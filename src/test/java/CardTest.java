@@ -8,7 +8,13 @@ public class CardTest {
 
   @Test
   public void instantiatesCardsCorrectly() {
-    Card testCard = new Card();
+    Card testCard = new Card("Ace", "Spades");
     assertEquals(true, testCard instanceof Card);
+  }
+
+  @Test
+  public void getSuit_returnsSuit_spades() {
+    Card testCard = new Card("Ace", "Spades");
+    assertEquals("Spades", testCard.getSuit());
   }
 }
