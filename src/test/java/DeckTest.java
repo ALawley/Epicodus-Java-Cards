@@ -25,4 +25,17 @@ public class DeckTest {
     assertEquals(52, testDeck.getCards().size());
   }
 
+  @Test
+  public void getCards_cardsAreInitalizedWithSuitsAndValues_AceOfSpades() {
+    Deck testDeck = new Deck();
+    Card aceOfSpades = testDeck.getCards().get(0);
+    assertEquals("Ace of Spades", aceOfSpades.getName());
+  }
+
+  @Test
+  public void getCards_deckContains52UniqueCards_kingOfDiamonds() {
+    Deck testDeck = new Deck();
+    Card kingOfDiamonds = testDeck.getCards().get(51);
+    assertEquals("King of Diamonds", kingOfDiamonds.getName());
+  }
 }
