@@ -38,4 +38,12 @@ public class DeckTest {
     Card kingOfDiamonds = testDeck.getCards().get(51);
     assertEquals("King of Diamonds", kingOfDiamonds.getName());
   }
+
+  @Test
+  public void shuffle_randomizesDeckOrder_false() {
+    Deck testDeck = new Deck();
+    testDeck.shuffle();
+    Card kingOfDiamonds = testDeck.getCards().get(51);
+    assertEquals(false, "King of Diamonds".equals(kingOfDiamonds.getName()));
+  }
 }

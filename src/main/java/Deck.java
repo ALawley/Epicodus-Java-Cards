@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.*;
 
 public class Deck {
   private static final String[] SUITS = {"Spades", "Clubs", "Hearts", "Diamonds"};
@@ -19,5 +20,10 @@ public class Deck {
 
   public ArrayList<Card> getCards() {
     return mCards;
+  }
+
+  public void shuffle() {
+    long seed = System.nanoTime();
+    Collections.shuffle(mCards, new Random(seed));
   }
 }
