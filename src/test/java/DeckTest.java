@@ -67,4 +67,11 @@ public class DeckTest {
     ArrayList<Card> drawSeven = testDeck.draw(7);
     assertEquals(7, drawSeven.size());
   }
+
+  @Test
+  public void cardsLeft_returnsCardsRemaining_50() {
+    Deck testDeck = new Deck();
+    testDeck.draw(2);
+    assertEquals(50, testDeck.cardsLeft());
+  }
 }

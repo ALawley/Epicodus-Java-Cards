@@ -35,4 +35,8 @@ public class Deck {
     }
     return drawnCard;
   }
+
+  public int cardsLeft() {
+    return mCards.size();
+  }
 }
