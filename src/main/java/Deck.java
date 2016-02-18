@@ -9,6 +9,12 @@ public class Deck {
 
   public Deck() {
     mCards = new ArrayList<Card>();
+    for (String suit : SUITS) {
+      for (String value : VALUES) {
+        Card newCard = new Card(suit, value);
+        mCards.add(newCard);
+      }
+    }
   }
 
   public ArrayList<Card> getCards() {

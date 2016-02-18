@@ -19,4 +19,10 @@ public class DeckTest {
     assertEquals(true, testDeck.getCards() instanceof ArrayList);
   }
 
+  @Test
+  public void getCards_initalizesWith52Cards_52() {
+    Deck testDeck = new Deck();
+    assertEquals(52, testDeck.getCards().size());
+  }
+
 }
