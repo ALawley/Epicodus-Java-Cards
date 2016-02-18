@@ -17,4 +17,10 @@ public class CardTest {
     Card testCard = new Card("Ace", "Spades");
     assertEquals("Spades", testCard.getSuit());
   }
+
+  @Test
+  public void getValue_returnsValue_Ace() {
+    Card testCard = new Card("Ace", "Spades");
+    assertEquals("Ace", testCard.getValue());
+  }
 }
