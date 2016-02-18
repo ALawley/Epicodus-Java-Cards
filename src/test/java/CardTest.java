@@ -7,7 +7,8 @@ public class CardTest {
   // public ClearRule clearRule = new ClearRule();
 
   @Test
-  public void method_input_result() {
-    // eventually put your testing code here
+  public void instantiatesCardsCorrectly() {
+    Card testCard = new Card();
+    assertEquals(true, testCard instanceof Card);
   }
 }
