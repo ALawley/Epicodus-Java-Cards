@@ -69,6 +69,14 @@ public class DeckTest {
   }
 
   @Test
+  public void draw_failsWhenNotEnoughCards_null() {
+    Deck testDeck = new Deck();
+    testDeck.draw(50);
+    ArrayList<Card> drawSeven = testDeck.draw(7);
+    assertTrue(drawSeven == null);
+  }
+
+  @Test
   public void cardsLeft_returnsCardsRemaining_50() {
     Deck testDeck = new Deck();
     testDeck.draw(2);

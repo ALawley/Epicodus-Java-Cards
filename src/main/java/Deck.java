@@ -29,9 +29,13 @@ public class Deck {
 
   public ArrayList<Card> draw(int numberOfCards) {
     ArrayList<Card> drawnCard = new ArrayList<Card>();
-    for (int i=0; i < numberOfCards; i++) {
-      drawnCard.add(mCards.get(0));
-      mCards.remove(0);
+    if (numberOfCards <= mCards.size()) {
+      for (int i=0; i < numberOfCards; i++) {
+        drawnCard.add(mCards.get(0));
+        mCards.remove(0);
+      }
+    } else {
+      return null;
     }
     return drawnCard;
   }
