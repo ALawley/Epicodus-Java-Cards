@@ -23,4 +23,10 @@ public class CardTest {
     Card testCard = new Card("Ace", "Spades");
     assertEquals("Ace", testCard.getValue());
   }
+
+  @Test
+  public void getName_returnsName_AceofSpades() {
+    Card testCard = new Card("Ace", "Spades");
+    assertEquals("Ace of Spades", testCard.getName());
+  }
 }

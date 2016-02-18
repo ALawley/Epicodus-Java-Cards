@@ -14,4 +14,8 @@ public class Card {
   public String getValue() {
     return mValue;
   }
+
+  public String getName() {
+    return mValue + " of " + mSuit;
+  }
 }
