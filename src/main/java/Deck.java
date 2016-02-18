@@ -27,9 +27,12 @@ public class Deck {
     Collections.shuffle(mCards, new Random(seed));
   }
 
-  public Card draw() {
-    Card drawnCard = mCards.get(0);
-    mCards.remove(0);
+  public ArrayList<Card> draw(int numberOfCards) {
+    ArrayList<Card> drawnCard = new ArrayList<Card>();
+    for (int i=0; i < numberOfCards; i++) {
+      drawnCard.add(mCards.get(0));
+      mCards.remove(0);
+    }
     return drawnCard;
   }
 }

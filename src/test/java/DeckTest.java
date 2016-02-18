@@ -50,14 +50,21 @@ public class DeckTest {
   @Test
   public void draw_drawsFirstCard_AceofSpades() {
     Deck testDeck = new Deck();
-    Card aceOfSpades = testDeck.draw();
-    assertEquals("Ace of Spades", aceOfSpades.getName());
+    ArrayList<Card> drawOne = testDeck.draw(1);
+    assertEquals("Ace of Spades", drawOne.get(0).getName());
   }
 
   @Test
   public void draw_removesFirstCard_51() {
     Deck testDeck = new Deck();
-    Card aceOfSpades = testDeck.draw();
+    ArrayList<Card> drawOne = testDeck.draw(1);
     assertEquals(51, testDeck.getCards().size());
+  }
+
+  @Test
+  public void draw_drawsSevenCards_7() {
+    Deck testDeck = new Deck();
+    ArrayList<Card> drawSeven = testDeck.draw(7);
+    assertEquals(7, drawSeven.size());
   }
 }
