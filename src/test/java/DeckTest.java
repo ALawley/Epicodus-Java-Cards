@@ -46,4 +46,18 @@ public class DeckTest {
     Card kingOfDiamonds = testDeck.getCards().get(51);
     assertEquals(false, "King of Diamonds".equals(kingOfDiamonds.getName()));
   }
+
+  @Test
+  public void draw_drawsFirstCard_AceofSpades() {
+    Deck testDeck = new Deck();
+    Card aceOfSpades = testDeck.draw();
+    assertEquals("Ace of Spades", aceOfSpades.getName());
+  }
+
+  @Test
+  public void draw_removesFirstCard_51() {
+    Deck testDeck = new Deck();
+    Card aceOfSpades = testDeck.draw();
+    assertEquals(51, testDeck.getCards().size());
+  }
 }

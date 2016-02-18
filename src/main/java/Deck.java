@@ -26,4 +26,10 @@ public class Deck {
     long seed = System.nanoTime();
     Collections.shuffle(mCards, new Random(seed));
   }
+
+  public Card draw() {
+    Card drawnCard = mCards.get(0);
+    mCards.remove(0);
+    return drawnCard;
+  }
 }
