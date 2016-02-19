@@ -53,4 +53,26 @@ public class Deck {
       }
     }
   }
+
+  public ArrayList<Card> restockDraw(int cards) {
+    ArrayList<Card> drawnCard = new ArrayList<Card>();
+    if (cards <= mCards.size()) {
+      for (int i=0; i < cards; i++) {
+        drawnCard.add(mCards.get(0));
+        mCards.remove(0);
+      }
+    } else {
+      for (int i=0; i < mCards.size(); i++) {
+        drawnCard.add(mCards.get(0));
+        mCards.remove(0);
+      }
+      this.restock();
+      cards -= drawnCard.size();
+      for (int i=0; i < cards; i++) {
+        drawnCard.add(mCards.get(0));
+        mCards.remove(0);
+      }
+    }
+    return drawnCard;
+  }
 }

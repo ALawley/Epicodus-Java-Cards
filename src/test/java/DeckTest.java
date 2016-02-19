@@ -90,4 +90,12 @@ public class DeckTest {
     testDeck.restock();
     assertEquals(52, testDeck.cardsLeft());
   }
+
+  @Test
+  public void restockDraw_drawsRemainingThenReplenishThenFinishDraw_49() {
+    Deck testDeck = new Deck();
+    testDeck.draw(51);
+    assertEquals(10, testDeck.restockDraw(10).size());
+    assertEquals(43, testDeck.cardsLeft());
+  }
 }
