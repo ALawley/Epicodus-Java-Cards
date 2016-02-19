@@ -1,12 +1,12 @@
-# _TITLE_
+# _Deck of Cards_
 
 #### _Epicodus Java Exercise, Date_
 
-#### By _**Anna Lawley and **_
+#### By _**Anna Lawley and Alissa Paluska**_
 
 ## Description
 
-__
+_Will create a deck of cards, shuffle and draw._
 
 ## Setup/Installation Requirements
 
@@ -36,4 +36,4 @@ _To contact, leave a comment on Github._
 
 *MIT License*
 
-Copyright (c) 2016 **_Anna Lawley and_**
+Copyright (c) 2016 **_Anna Lawley and Alissa Paluska_**
