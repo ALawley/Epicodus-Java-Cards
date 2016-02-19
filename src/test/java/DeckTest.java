@@ -82,4 +82,12 @@ public class DeckTest {
     testDeck.draw(2);
     assertEquals(50, testDeck.cardsLeft());
   }
+
+  @Test
+  public void restock_resetsDeckTo52Cards_52() {
+    Deck testDeck = new Deck();
+    testDeck.draw(20);
+    testDeck.restock();
+    assertEquals(52, testDeck.cardsLeft());
+  }
 }

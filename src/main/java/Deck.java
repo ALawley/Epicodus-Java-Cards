@@ -43,4 +43,14 @@ public class Deck {
   public int cardsLeft() {
     return mCards.size();
   }
+
+  public void restock() {
+    mCards.clear();
+    for (String suit : SUITS) {
+      for (String value : VALUES) {
+        Card newCard = new Card(value, suit);
+        mCards.add(newCard);
+      }
+    }
+  }
 }
